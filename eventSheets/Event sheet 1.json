@@ -1,0 +1,28 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 307115174685001
+				}
+			],
+			"actions": [
+				{
+					"id": "set-elasticity",
+					"objectClass": "Particle",
+					"sid": 502503219186522,
+					"behaviorType": "Physics",
+					"parameters": {
+						"elasticity": "0.6"
+					}
+				}
+			],
+			"sid": 592586553532671
+		}
+	],
+	"sid": 783183424166091
+}

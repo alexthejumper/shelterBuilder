@@ -1,0 +1,383 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 36802,
+	"name": "Shelter Builder",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "alphaclamp2",
+			"name": "Alpha clamp",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "9nyuxrm8xqq",
+	"objectTypes": {
+		"items": [
+			"Text3",
+			"Text4",
+			"Text5",
+			"background",
+			"weaponHolder",
+			"cat1",
+			"barriers",
+			"redBorder2",
+			"position",
+			"button",
+			"objectHud2",
+			"objectHud3",
+			"restartButton",
+			"land",
+			"background3",
+			"background2",
+			"Keyboard",
+			"Mouse",
+			"Touch",
+			"triangleWood",
+			"verticalWood",
+			"pirate",
+			"ball",
+			"cannon",
+			"cannon2",
+			"cannonTrigger",
+			"play",
+			"about",
+			"misic",
+			"sound",
+			"Audio",
+			"gameTitle",
+			"background4",
+			"pirate2",
+			"level2Finish",
+			"table",
+			"header",
+			"stars",
+			"nextLevelText",
+			"scoreText",
+			"test",
+			"Particle",
+			"boundary",
+			"itemBackground",
+			"pauseText",
+			"play2",
+			"pauseScore",
+			"pause",
+			"ok",
+			"transparentBackground",
+			"restart",
+			"Particle2",
+			"ball2",
+			"TiledBackground",
+			"Tilemap",
+			"Ground_",
+			"Ground_2",
+			"Ground_3",
+			"Ground_4",
+			"Ground_5",
+			"Sprite",
+			"desertBackground",
+			"desertLandremovebgpreview",
+			"croppeddesertbackground",
+			"Sprite2",
+			"tree",
+			"tree3",
+			"waterBorder"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"menuLayout",
+			"shelterConstruct",
+			"shelterConstruct2",
+			"fluidDynamics",
+			"Layout 1"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"shelterEventSheet",
+			"menuEventSheet",
+			"shelterEventSheet2",
+			"Event sheet 1",
+			"fluidDynamicsSheet"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "cannon-fire-161072.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 543404739864459,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "249375-Cartoon_Pirate_Voice_-Fire.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 311442549738862,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "415742-Pirate_Saying_You_Lost_Mate.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 428317570198572,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "RPG_タイトル画面_loop.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 289463533577107,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 113013707965591,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 544442792900733,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 485191193104799,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 755914179611909,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 674926312218311,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 607402980520434,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 568543614909396,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 2000,
+	"viewportHeight": 500,
+	"firstLayout": null
+}

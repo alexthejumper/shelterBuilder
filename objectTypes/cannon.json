@@ -1,0 +1,45 @@
+{
+	"name": "cannon",
+	"plugin-id": "Sprite",
+	"sid": 669539322347427,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 150,
+						"height": 67,
+						"originX": 0.24666666666666667,
+						"originY": 0.5074626865671642,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4250862,
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.9,
+								"y": 0.5074626865671642
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 202769870657622,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

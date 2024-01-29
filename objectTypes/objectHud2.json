@@ -1,0 +1,58 @@
+{
+	"name": "objectHud2",
+	"plugin-id": "Sprite",
+	"sid": 453293781039297,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "IsDragging",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 167235610028833
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 50,
+						"height": 100,
+						"originX": 0.5,
+						"originY": 0.9901960784313726,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8507525,
+						"collisionPoly": {
+							"points": [
+								0.04785005231917473,
+								0.027524998497701302,
+								0.9521499476808253,
+								0.027524998497701302,
+								0.9521499476808253,
+								0.9724750015022988,
+								0.04785005231917473,
+								0.9724750015022988
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 236300723325183,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

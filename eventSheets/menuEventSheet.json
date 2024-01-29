@@ -1,0 +1,316 @@
+{
+	"name": "menuEventSheet",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "backMusic",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 460084787081983
+		},
+		{
+			"eventType": "variable",
+			"name": "SFX",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 953131162006380
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 714723551140632
+				}
+			],
+			"actions": [],
+			"sid": 468886192274221,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 396358714172394,
+							"parameters": {
+								"variable": "backMusic"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 650474856035014,
+							"parameters": {
+								"audio-file": "RPG_タイトル画面_loop",
+								"loop": "looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"bgMusic\""
+							}
+						}
+					],
+					"sid": 776458317218815
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 189613244760009
+						}
+					],
+					"actions": [
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 178010788579651,
+							"parameters": {
+								"tag": "\"bgMusic\"",
+								"state": "muted"
+							}
+						}
+					],
+					"sid": 216989130235169
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 527597123718287,
+							"parameters": {
+								"variable": "SFX"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 903984580174033
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 865532751813249
+						}
+					],
+					"actions": [],
+					"sid": 723113245995670
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 870870328872653,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "play"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 806973182922942,
+					"parameters": {
+						"layout": "shelterConstruct"
+					}
+				}
+			],
+			"sid": 479757979986015
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 902364965079216,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "sound"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 596150083961918,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 349538901117517,
+							"parameters": {
+								"variable": "backMusic"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 141942577028742,
+							"parameters": {
+								"variable": "backMusic",
+								"value": "false"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "Audio",
+							"sid": 785430349786665,
+							"parameters": {
+								"tag": "\"bgMusic\""
+							}
+						}
+					],
+					"sid": 500096843989740
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 536701039104339
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 318270930210173,
+							"parameters": {
+								"variable": "backMusic",
+								"value": "true"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 702206975199489,
+							"parameters": {
+								"audio-file": "RPG_タイトル画面_loop",
+								"loop": "looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"bgMusic\""
+							}
+						}
+					],
+					"sid": 166592521278992
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 289237845132550,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "misic"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 167395900430393,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 720419255144572,
+							"parameters": {
+								"variable": "SFX"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 242676336240863,
+							"parameters": {
+								"variable": "SFX",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 176165793061153
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 504962703075309
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 839863890765948,
+							"parameters": {
+								"variable": "SFX",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 275492898189496
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 569834808648925
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "test",
+					"sid": 636560195135852,
+					"parameters": {
+						"text": "backMusic"
+					}
+				}
+			],
+			"sid": 193683839238737
+		}
+	],
+	"sid": 163291537754442
+}

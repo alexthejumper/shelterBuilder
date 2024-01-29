@@ -1,0 +1,1031 @@
+{
+	"name": "shelterEventSheet",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "menuEventSheet"
+		},
+		{
+			"eventType": "variable",
+			"name": "readyState",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 879821603035605
+		},
+		{
+			"eventType": "variable",
+			"name": "score",
+			"type": "number",
+			"initialValue": "500",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 571506478616523
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 784354929517535
+				}
+			],
+			"actions": [
+				{
+					"id": "set-immovable",
+					"objectClass": "cat1",
+					"sid": 335172767687824,
+					"behaviorType": "Physics",
+					"parameters": {
+						"setting": "immovable"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 131547484142534,
+					"parameters": {
+						"layer": "\"background2\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-friction",
+					"objectClass": "triangleWood",
+					"sid": 440496481021867,
+					"behaviorType": "Physics",
+					"parameters": {
+						"friction": "0.1"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 491216722480024,
+					"parameters": {
+						"layer": "\"bordersLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 468210569169220,
+					"parameters": {
+						"variable": "readyState",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 792855672711501,
+					"parameters": {
+						"layer": "\"winLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 284069323604540,
+					"parameters": {
+						"layer": "\"pauseLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 752406829180298,
+					"parameters": {
+						"layer": "\"opacityLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 739881565464971,
+					"parameters": {
+						"layer": "\"pauseLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 264611211250099,
+					"parameters": {
+						"layer": "\"HUD\"",
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 474758628665938
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 379587112715964
+				}
+			],
+			"actions": [
+				{
+					"id": "set-density",
+					"objectClass": "verticalWood",
+					"sid": 956233978499817,
+					"behaviorType": "Physics",
+					"parameters": {
+						"density": "0.5"
+					}
+				},
+				{
+					"id": "set-density",
+					"objectClass": "triangleWood",
+					"sid": 417772337966388,
+					"behaviorType": "Physics",
+					"parameters": {
+						"density": "0.5"
+					}
+				},
+				{
+					"id": "set-friction",
+					"objectClass": "cat1",
+					"sid": 290359652060759,
+					"behaviorType": "Physics",
+					"parameters": {
+						"friction": "0.1"
+					}
+				},
+				{
+					"id": "set-friction",
+					"objectClass": "verticalWood",
+					"sid": 633107077848373,
+					"behaviorType": "Physics",
+					"parameters": {
+						"friction": "0.1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text3",
+					"sid": 369902387770232,
+					"parameters": {
+						"text": "\"Land: \"& land.Physics.Friction"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text4",
+					"sid": 577601211548233,
+					"parameters": {
+						"text": "\"V wood: \"& verticalWood.Physics.Friction"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text5",
+					"sid": 903837728645002,
+					"parameters": {
+						"text": "\"Cat\" & cat1.Physics.Friction"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "scoreText",
+					"sid": 384677324323414,
+					"parameters": {
+						"text": "\"Your score: \"&score"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "test",
+					"sid": 364868713664984,
+					"parameters": {
+						"text": "backMusic"
+					}
+				}
+			],
+			"sid": 988440145613105,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "verticalWood",
+							"sid": 785066158765617,
+							"parameters": {
+								"object": "barriers"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 438084098086657,
+							"parameters": {
+								"variable": "readyState"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "verticalWood",
+							"sid": 626569117134421,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "verticalWood",
+							"sid": 511774582974569,
+							"parameters": {
+								"x": "1000",
+								"y": "164"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 567859823995575,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "verticalWood",
+							"sid": 707113631248154,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 335661558077873
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "triangleWood",
+							"sid": 878275941838019,
+							"parameters": {
+								"object": "barriers"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 591487624238021,
+							"parameters": {
+								"variable": "readyState"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "triangleWood",
+							"sid": 376720033492989,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "triangleWood",
+							"sid": 328231704750235,
+							"parameters": {
+								"x": "1000",
+								"y": "164"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 504204884653213,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "triangleWood",
+							"sid": 304386888825386,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 281181844664298
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Gameplay Buttons",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Pause Layout",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 315626593531994,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "pause"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 238904302929227,
+									"parameters": {
+										"layer": "\"opacityLayer\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 217334846475453,
+									"parameters": {
+										"layer": "\"pauseLayer\"",
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 341100102470734,
+									"parameters": {
+										"layer": "\"HUD\"",
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 304989107541673
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 911985282202951,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "play2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 449561215379885,
+									"parameters": {
+										"layer": "\"opacityLayer\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 279703773388009,
+									"parameters": {
+										"layer": "\"pauseLayer\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 470299090083470,
+									"parameters": {
+										"layer": "\"HUD\"",
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 437346522925352
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 877571974880606,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "pauseText"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 190177358158489,
+									"parameters": {
+										"layout": "menuLayout"
+									}
+								}
+							],
+							"sid": 638123091842543
+						}
+					],
+					"sid": 438000252479237
+				}
+			],
+			"sid": 457052920962084
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Items Creation",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 189116556985064,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "objectHud2"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 992904115735389,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "position",
+									"sid": 425322641697355,
+									"parameters": {
+										"object": "verticalWood"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "position",
+									"sid": 593812277383120,
+									"parameters": {
+										"object": "verticalWood",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 628885392631240,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "verticalWood",
+									"sid": 460468528949013,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "disabled"
+									}
+								}
+							],
+							"sid": 104485216219547
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 410742240565047,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "objectHud3"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 573826981816256,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "position",
+									"sid": 837347627697602,
+									"parameters": {
+										"object": "triangleWood"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "position",
+									"sid": 586730946290830,
+									"parameters": {
+										"object": "triangleWood",
+										"layer": "1",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 478368039529405,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "triangleWood",
+									"sid": 344723126347248,
+									"behaviorType": "Physics",
+									"parameters": {
+										"mode": "disabled"
+									}
+								}
+							],
+							"sid": 615574989964549
+						}
+					]
+				}
+			],
+			"sid": 981604125765844
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Game Ready",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 912458113975292,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ok"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "ok",
+							"sid": 287092902377978
+						},
+						{
+							"id": "destroy",
+							"objectClass": "objectHud2",
+							"sid": 978941236692561
+						},
+						{
+							"id": "destroy",
+							"objectClass": "objectHud3",
+							"sid": 336487315352804
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "verticalWood",
+							"sid": 763127135841181,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "triangleWood",
+							"sid": 276328562932993,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "enabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "pirate",
+							"sid": 357940025234156,
+							"parameters": {
+								"animation": "\"Animation 2\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 401983105783086,
+							"parameters": {
+								"audio-file": "249375-Cartoon_Pirate_Voice_-Fire",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 154092509630618,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "pirate",
+							"sid": 513538009172841,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 141051771188423,
+							"parameters": {
+								"layer": "\"bordersLayer\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 325264388323815,
+							"parameters": {
+								"variable": "readyState",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 124944009058902,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 959824298146481,
+									"parameters": {
+										"variable": "SFX"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "cannon",
+									"sid": 910071950439774,
+									"parameters": {
+										"object": "ball",
+										"layer": "\"characters\"",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "apply-impulse-at-angle",
+									"objectClass": "ball",
+									"sid": 213720714150393,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse": "distance(Self.X, Self.Y, 10, 10) / 60",
+										"angle": "cannon.Angle",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 414850568887516,
+									"parameters": {
+										"audio-file": "cannon-fire-161072",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"canonSound\""
+									}
+								}
+							],
+							"sid": 183734257198331
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 276242684558793
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "cannon",
+									"sid": 405157021323066,
+									"parameters": {
+										"object": "ball",
+										"layer": "\"characters\"",
+										"image-point": "1",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "apply-impulse-at-angle",
+									"objectClass": "ball",
+									"sid": 231001927272459,
+									"behaviorType": "Physics",
+									"parameters": {
+										"impulse": "distance(Self.X, Self.Y, 10, 10) / 60",
+										"angle": "cannon.Angle",
+										"image-point": "0"
+									}
+								}
+							],
+							"sid": 400221136746720
+						}
+					]
+				}
+			],
+			"sid": 866062371775710
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cat",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "triangleWood",
+							"sid": 712213576093933,
+							"parameters": {
+								"object": "cat1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 727958091294817,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-enabled",
+									"objectClass": "triangleWood",
+									"sid": 682192541868703,
+									"behaviorType": "Physics"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-immovable",
+									"objectClass": "cat1",
+									"sid": 426689009791189,
+									"behaviorType": "Physics",
+									"parameters": {
+										"setting": "movable"
+									}
+								}
+							],
+							"sid": 393989615194784
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "verticalWood",
+							"sid": 899492984748806,
+							"parameters": {
+								"object": "cat1"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 278929911252426,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-enabled",
+									"objectClass": "verticalWood",
+									"sid": 120180414534913,
+									"behaviorType": "Physics"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-immovable",
+									"objectClass": "cat1",
+									"sid": 351500425205670,
+									"behaviorType": "Physics",
+									"parameters": {
+										"setting": "movable"
+									}
+								}
+							],
+							"sid": 541764961565180
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "ball",
+							"sid": 502057760717635,
+							"parameters": {
+								"object": "cat1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-immovable",
+							"objectClass": "cat1",
+							"sid": 884271534254296,
+							"behaviorType": "Physics",
+							"parameters": {
+								"setting": "movable"
+							}
+						}
+					],
+					"sid": 221056011512388,
+					"isOrBlock": true
+				}
+			],
+			"sid": 753765335744213
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mobile",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Items Rotate",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 576572198614959,
+									"parameters": {
+										"object": "verticalWood"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-clockwise",
+									"objectClass": "verticalWood",
+									"sid": 690021132919431,
+									"parameters": {
+										"degrees": "90"
+									}
+								}
+							],
+							"sid": 744116281033355
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 856306787360186,
+									"parameters": {
+										"object": "triangleWood"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "rotate-clockwise",
+									"objectClass": "triangleWood",
+									"sid": 524466554790672,
+									"parameters": {
+										"degrees": "90"
+									}
+								}
+							],
+							"sid": 543649109598289
+						}
+					],
+					"sid": 973921528907547
+				}
+			],
+			"sid": 470542057744237
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 648157808058859,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "restart"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 590780534782455
+				}
+			],
+			"sid": 512613157207439
+		}
+	],
+	"sid": 743854927506720
+}

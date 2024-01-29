@@ -1,0 +1,339 @@
+{
+	"name": "fluidDynamicsSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 622292530568291
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "tree3",
+					"sid": 368407542035467,
+					"parameters": {
+						"animation": "\"tree0\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 432615459014093
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 603106495417261
+				}
+			],
+			"actions": [
+				{
+					"id": "set-immovable",
+					"objectClass": "verticalWood",
+					"sid": 581231399927309,
+					"behaviorType": "Physics",
+					"parameters": {
+						"setting": "immovable"
+					}
+				}
+			],
+			"sid": 640600202886224
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 146956013343692,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "objectHud2"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 761690059794515,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "position",
+							"sid": 363646896768168,
+							"parameters": {
+								"object": "verticalWood"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "position",
+							"sid": 636197405069763,
+							"parameters": {
+								"object": "verticalWood",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 169242562968802,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "verticalWood",
+							"sid": 184636317808822,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "enabled"
+							}
+						}
+					],
+					"sid": 252540480797799
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 239352055661023,
+					"parameters": {
+						"object": "verticalWood"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "rotate-clockwise",
+					"objectClass": "verticalWood",
+					"sid": 364243521816203,
+					"parameters": {
+						"degrees": "45"
+					}
+				}
+			],
+			"sid": 693706141081019
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 226375016159820,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "ok"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ok",
+					"sid": 526826565147856
+				},
+				{
+					"id": "destroy",
+					"objectClass": "objectHud2",
+					"sid": 290235636176588
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "verticalWood",
+					"sid": 220683436116060,
+					"behaviorType": "Physics",
+					"parameters": {
+						"mode": "enabled"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "pirate",
+					"sid": 717774397075561,
+					"parameters": {
+						"animation": "\"Animation 2\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 275321515391070,
+					"parameters": {
+						"audio-file": "249375-Cartoon_Pirate_Voice_-Fire",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 354104793291971,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "pirate",
+					"sid": 359368852734470,
+					"parameters": {
+						"animation": "\"Animation 1\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 384173010900473,
+					"parameters": {
+						"layer": "\"bordersLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 252036302364478,
+					"parameters": {
+						"variable": "readyState",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 152588480095821,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 341000401371551,
+							"parameters": {
+								"variable": "SFX"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "cannon",
+							"sid": 678463856737968,
+							"parameters": {
+								"object": "ball",
+								"layer": "\"charactersLayer\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "apply-impulse-at-angle",
+							"objectClass": "ball",
+							"sid": 865736466199073,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse": "distance(Self.X, Self.Y, 10, 10) / 60",
+								"angle": "cannon.Angle",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 563802920229926,
+							"parameters": {
+								"audio-file": "cannon-fire-161072",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"canonSound\""
+							}
+						}
+					],
+					"sid": 251708156059421
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 577277306461972
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "cannon",
+							"sid": 601069066587781,
+							"parameters": {
+								"object": "ball",
+								"layer": "\"charactersLayer\"",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "apply-impulse-at-angle",
+							"objectClass": "ball",
+							"sid": 280499014026359,
+							"behaviorType": "Physics",
+							"parameters": {
+								"impulse": "distance(Self.X, Self.Y, 10, 10) / 60",
+								"angle": "cannon.Angle",
+								"image-point": "0"
+							}
+						}
+					],
+					"sid": 735166133182900
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "waterBorder",
+					"sid": 445765679382715,
+					"parameters": {
+						"object": "ball"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "waterBorder",
+					"sid": 594907942192404
+				}
+			],
+			"sid": 940258670762321
+		}
+	],
+	"sid": 572917805771811
+}

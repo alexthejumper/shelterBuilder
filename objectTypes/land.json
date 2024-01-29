@@ -1,0 +1,56 @@
+{
+	"name": "land",
+	"plugin-id": "Sprite",
+	"sid": 893783584551161,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 220358256259968
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1042,
+						"height": 121,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4849061,
+						"collisionPoly": {
+							"points": [
+								0.0009596928982725527,
+								0.01652892561983471,
+								0.9990403071017274,
+								0.01652892561983471,
+								1,
+								0.9586775598447186,
+								0.0009596928982725527,
+								0.9834710743801653
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 592478961388643,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

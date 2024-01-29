@@ -1,0 +1,56 @@
+{
+	"name": "desertLandremovebgpreview",
+	"plugin-id": "Sprite",
+	"sid": 694449838372599,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physics",
+			"sid": 568180007218190
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 1084,
+						"height": 104,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 2417266,
+						"collisionPoly": {
+							"points": [
+								0.0009225092250922509,
+								0.009615384615384616,
+								0.9990774907749077,
+								0.009615384615384616,
+								0.9990774907749077,
+								1,
+								0.0009225092250922509,
+								1
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 198244574189773,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
